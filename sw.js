@@ -2,7 +2,7 @@ const CACHE_NAME = 'toeic-app-v1';
 const ASSETS = [
   './',
   './index.html',
-  './manifest.webmanifest',
+  './manifest.json',
   './icon.svg'
 ];
 
