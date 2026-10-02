@@ -1,6 +1,6 @@
 {
-  "name": "英単語＆文法アプリ",
-  "short_name": "英単語アプリ",
+  "name": "グリモアラボ",
+  "short_name": "グリモアラボ",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
