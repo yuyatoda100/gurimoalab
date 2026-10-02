@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>グリモア・ラボ (Grimoire Lab) - Proto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="canvas-container">
+  <canvas id="gameCanvas"></canvas>
+  
+  <div id="ui-layer">
+    <!-- Top Stats -->
+    <div id="top-bar" class="interactive">
+      <div class="stat-box">
+        <span>MANA (MP):</span>
+        <span id="mp-display" class="stat-value">100 / 100</span>
+      </div>
+      <div class="stat-box">
+        <span>RATE:</span>
+        <span id="tps-display" class="stat-value">+2.0 MP/s</span>
+      </div>
+      <div class="stat-box">
+        <span>DISCOVERED:</span>
+        <span id="discovered-display" class="stat-value">4 / 31</span>
+      </div>
+      <button class="btn" onclick="meditate()">瞑想 (+5 MP)</button>
+    </div>
+
+    <!-- Bottom Actions -->
+    <div id="toolbar" class="interactive">
+      <button class="btn active" id="btn-select" onclick="setMode('select')">選択 / 操作</button>
+      <button class="btn" id="btn-node" onclick="setMode('node')">中継ノード (10 MP)</button>
+      <button class="btn" id="btn-collector" onclick="setMode('collector')">採取陣 (25 MP)</button>
+      <button class="btn" id="btn-factory" onclick="setMode('factory')">調合プラント (50 MP)</button>
+    </div>
+
+    <!-- Right Side Info Panel -->
+    <div id="side-panel" class="interactive">
+      <div class="panel-title" id="panel-title">ノード情報</div>
+      <div id="panel-content" class="node-info">
+        マップ上のオブジェクトを選択してください。<br><br>
+        <b>[接続のやり方]</b><br>
+        右クリックドラッグ または Shift+左ドラッグ でノード同士をラインで繋ぎます。
+      </div>
+    </div>
+  </div>
+
+  <!-- Clear Screen -->
+  <div id="clear-modal">
+    <h1>✨ 大魔法陣・完成 ✨</h1>
+    <p>見事だ。お前が効率のために刻んだその路こそ、星を包む『大錬金魔法陣』そのものであったのだ。</p>
+    <p style="color: #66fcf1; font-size: 16px;">全31種類のエレメントを統合し、大賢者の石「アーカーシャ」の錬成に成功しました！</p>
+    <button class="btn interactive" style="font-size: 20px; padding: 12px 30px; margin-top: 20px;" onclick="location.reload()">もう一度プレイ</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
